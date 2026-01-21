@@ -1,3 +1,6 @@
+import 'package:Hungry/features/auth/views/login_view.dart';
+import 'package:Hungry/root.dart';
+import 'package:Hungry/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'features/auth/views/signup_view.dart';
