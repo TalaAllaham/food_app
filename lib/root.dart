@@ -4,7 +4,6 @@ import 'package:Hungry/features/home/views/home_view.dart';
 import 'package:Hungry/features/orderHistory/views/order_history_view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:responsive_sizer/responsive_sizer.dart';
 import 'features/auth/views/profile_view.dart';
 
 class Root extends StatefulWidget {
@@ -31,6 +30,7 @@ class _RootState extends State<Root> {
     return Scaffold(
       body: PageView(
         controller: controller,
+        physics: NeverScrollableScrollPhysics(),
         children: screens,
       ),
       bottomNavigationBar: Container(

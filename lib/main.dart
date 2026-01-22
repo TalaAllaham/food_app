@@ -1,4 +1,5 @@
 import 'package:Hungry/features/auth/views/login_view.dart';
+import 'package:Hungry/features/home/views/home_view.dart';
 import 'package:Hungry/root.dart';
 import 'package:Hungry/splash_screen.dart';
 import 'package:flutter/material.dart';
@@ -17,8 +18,11 @@ class MyApp extends StatelessWidget {
     return ResponsiveSizer(
       builder: (context, orientation, screenType) {
         return MaterialApp(
+          theme: ThemeData(
+            scaffoldBackgroundColor: Colors.white
+          ),
           debugShowCheckedModeBanner: false,
-          home: SignupScreen(),
+          home: Root(),
         );
       },
     );
