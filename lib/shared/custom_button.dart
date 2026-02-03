@@ -18,7 +18,7 @@ class CustomButton extends StatelessWidget {
     return  GestureDetector(
     onTap: onTap,
     child: Container(
-    height: height ?? 60,
+    height: height ?? 55,
     width: width ?? 320,
     decoration: BoxDecoration(
     color: color ?? Colors.white,
