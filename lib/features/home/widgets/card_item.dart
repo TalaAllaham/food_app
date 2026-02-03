@@ -2,7 +2,6 @@ import 'package:Hungry/core/constants/app_colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-
 import '../../../shared/custom_text.dart';
 
 class CardItem extends StatelessWidget {
@@ -13,6 +12,7 @@ class CardItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      shadowColor: Colors.green,
       color: Colors.white,
       child: Padding(
         padding: const EdgeInsets.all(8.0),

@@ -2,12 +2,9 @@ import 'package:Hungry/features/home/widgets/card_item.dart';
 import 'package:Hungry/features/home/widgets/food_category.dart';
 import 'package:Hungry/features/home/widgets/search_field.dart';
 import 'package:Hungry/features/home/widgets/user_header.dart';
-import 'package:Hungry/shared/custom_text.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:Hungry/features/products/views/product_details_view.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
-import 'package:responsive_sizer/responsive_sizer.dart';
 import '../../../core/constants/app_colors.dart';
 
 class HomeView extends StatefulWidget {
@@ -75,12 +72,17 @@ class _HomeViewState extends State<HomeView> {
                       childAspectRatio: 0.70 ),
                   delegate: SliverChildBuilderDelegate(
                   childCount: 6,
-                  (context,index) => CardItem(
-                    image: "assets/images/Burger.png",
-                    text: "Cheese Burger",
-                    desc: "Wendy's Burger",
-                    rate: "4.9"
-                ),
+                  (context,index) => GestureDetector(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => ProductDetailsView()));
+                    },
+                    child: CardItem(
+                      image: "assets/images/Burger.png",
+                      text: "Cheese Burger",
+                      desc: "Wendy's Burger",
+                      rate: "4.9"
+                                    ),
+                  ),
               )
               ),
             )],

@@ -1,4 +1,4 @@
-import 'package:Hungry/features/auth/widgets/custom_button.dart';
+import 'package:Hungry/shared/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';

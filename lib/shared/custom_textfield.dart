@@ -37,6 +37,7 @@ class _CustomTextfieldState extends State<CustomTextfield> {
       cursorColor: AppColors.green,
       cursorHeight: 20,
       decoration: InputDecoration(
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
         suffixIcon: widget.isPass
             ? IconButton(
           icon: Icon(
