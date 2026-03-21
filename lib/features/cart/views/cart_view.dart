@@ -1,5 +1,6 @@
 import 'package:Hungry/core/constants/app_colors.dart';
 import 'package:Hungry/features/cart/widgets/cart_item.dart';
+import 'package:Hungry/features/checkout/views/checkout_view.dart';
 import 'package:Hungry/shared/custom_button.dart';
 import 'package:Hungry/shared/custom_text.dart';
 import 'package:flutter/material.dart';
@@ -82,7 +83,9 @@ class _CartViewState extends State<CartView> {
                      x: 18,
                      color: AppColors.green,
                      textColor: Colors.white,
-                     onTap: (){}
+                     onTap: () => Navigator.push(context,MaterialPageRoute(builder: (context) {
+                       return CheckoutView();
+                     }))
                  ),
                ],
              ),
