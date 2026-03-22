@@ -33,6 +33,7 @@ class _HomeViewState extends State<HomeView> {
           slivers: [
             SliverAppBar(
               backgroundColor: AppColors.green,
+              automaticallyImplyLeading: false,
               elevation: 0,
               pinned: true,
               toolbarHeight: 160,
@@ -69,7 +70,7 @@ class _HomeViewState extends State<HomeView> {
               sliver: SliverGrid(
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount:2,
-                      childAspectRatio: 0.70 ),
+                      childAspectRatio: 0.75 ),
                   delegate: SliverChildBuilderDelegate(
                   childCount: 6,
                   (context,index) => GestureDetector(

@@ -63,28 +63,43 @@ class _ProductDetailsViewState extends State<ProductDetailsView> {
             );}
               )),
                   ),
-              Gap(30),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+              Gap(30)]))),
+              bottomSheet: Container(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(30),
+                    color: Colors.white,
+                    boxShadow: [ BoxShadow(
+                        color: Colors.grey,
+                        offset: Offset(0, 1),
+                        blurRadius: 10
+                    )]
+                ),
+                height: 120,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      CustomText(text: "Total",size: 16),
-                      CustomText(text: "\$ 158",size: 24),
-                    ]),
-                  CustomButton(
-                    text: "Add To Cart",
-                    width: 150,
-                    x: 18,
-                    color: AppColors.green,
-                    textColor: Colors.white,
-                    onTap: (){}
+                      Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            CustomText(text: "Total",size: 16),
+                            CustomText(text: "\$ 188",size: 24),
+                          ]),
+                      CustomButton(
+                          text: "Add to cart",
+                          width: 130,
+                          x: 18,
+                          color: AppColors.green,
+                          textColor: Colors.white,
+                          onTap: () {}
+                          )
+                    ],
                   ),
-                ],
+                ),
               ),
-              Gap(20),
-            ]),
-          )));
+    );
   }
 }

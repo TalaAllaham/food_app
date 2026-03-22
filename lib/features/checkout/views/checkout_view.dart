@@ -95,18 +95,19 @@ class _CheckoutViewState extends State<CheckoutView> {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
           child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     CustomText(text: "Total Price",size: 16),
                     CustomText(text: "\$ 99.19",size: 24),
                   ]),
               CustomButton(
                   text: "Pay Now",
-                  width: 150,
+                  width: 130,
                   x: 18,
                   color: AppColors.green,
                   textColor: Colors.white,

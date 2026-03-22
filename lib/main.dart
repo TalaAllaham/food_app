@@ -1,4 +1,5 @@
 import 'package:Hungry/root.dart';
+import 'package:Hungry/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
             scaffoldBackgroundColor: Colors.white
           ),
           debugShowCheckedModeBanner: false,
-          home: Root(),
+          home: SplashScreen(),
         );
       },
     );

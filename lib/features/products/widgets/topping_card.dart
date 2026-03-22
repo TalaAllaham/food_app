@@ -18,10 +18,10 @@ class ToppingCard extends StatelessWidget {
         clipBehavior: Clip.none,
         children: [
           Container(
-            height: 100,
-            width: 80,
+            height: 105,
+            width: 85,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(30),
+              borderRadius: BorderRadius.circular(10),
               color: AppColors.brown
             ),
           ),
@@ -34,11 +34,11 @@ class ToppingCard extends StatelessWidget {
             spreadRadius: 2,
             offset: Offset(0, 4),
           )],
-                borderRadius: BorderRadius.circular(30),
+                borderRadius: BorderRadius.circular(10),
                 color: Colors.white
             ),
             child: ClipRRect(
-              child: Image.asset(img,width: 80,height: 65),
+              child: Image.asset(img,height: 60,width: 85),
             ),
           ),
           Positioned(
