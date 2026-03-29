@@ -1,3 +1,4 @@
+import 'package:Hungry/features/auth/views/login_view.dart';
 import 'package:Hungry/root.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -53,7 +54,7 @@ class _SplashScreenState extends State<SplashScreen>
           context,
           PageRouteBuilder(
             transitionDuration: const Duration(milliseconds: 800),
-            pageBuilder: (_, animation, __) => const Root(),
+            pageBuilder: (_, animation, __) => const LoginScreen(),
             transitionsBuilder: (_, animation, __, child) {
               return FadeTransition(
                 opacity: animation,

@@ -1,9 +1,14 @@
 import 'package:Hungry/root.dart';
 import 'package:Hungry/splash_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp
+  ]);
   runApp(const MyApp());
 }
 
@@ -16,6 +21,7 @@ class MyApp extends StatelessWidget {
       builder: (context, orientation, screenType) {
         return MaterialApp(
           theme: ThemeData(
+            splashColor: Colors.transparent,
             scaffoldBackgroundColor: Colors.white
           ),
           debugShowCheckedModeBanner: false,

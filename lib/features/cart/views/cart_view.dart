@@ -1,5 +1,6 @@
 import 'package:Hungry/core/constants/app_colors.dart';
 import 'package:Hungry/features/cart/widgets/cart_item.dart';
+import 'package:Hungry/features/checkout/views/checkout_view.dart';
 import 'package:Hungry/shared/custom_button.dart';
 import 'package:Hungry/shared/custom_text.dart';
 import 'package:flutter/material.dart';
@@ -38,20 +39,15 @@ class _CartViewState extends State<CartView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     appBar: AppBar(
-       surfaceTintColor: Colors.white,
-       toolbarHeight: 0,
-       backgroundColor: Colors.white,
-     ),
      body: Padding(
-       padding: EdgeInsets.symmetric(horizontal: 15.0),
+       padding: EdgeInsets.symmetric(horizontal: 15),
        child:
            Column(
              children: [
            Expanded(
              flex: 5,
              child: ListView.builder(
-                 padding: EdgeInsets.only(bottom: 60,top: 60),
+                 padding: EdgeInsets.only(bottom: 60,top: 40),
                  itemBuilder: (context, index) => Padding(
                    padding: const EdgeInsets.only(bottom: 8.0),
                    child: CartItem(
@@ -81,9 +77,9 @@ class _CartViewState extends State<CartView> {
                 blurRadius: 10
             )]
         ),
-        height: 100,
+        height: 90,
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -101,7 +97,8 @@ class _CartViewState extends State<CartView> {
                   x: 18,
                   color: AppColors.green,
                   textColor: Colors.white,
-                  onTap: () {}
+                  onTap: () =>
+                    Navigator.push(context, MaterialPageRoute(builder: (_)=> CheckoutView()))
               )
             ],
           ),

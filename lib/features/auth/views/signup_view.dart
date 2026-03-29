@@ -34,7 +34,7 @@ class _SignupScreenState extends State<SignupScreen> {
           key: formKey,
           child: Column(
             children: [
-              Gap(200),
+              Gap(100),
               SvgPicture.asset("assets/images/logo.svg",color: AppColors.green),
               Gap(3.vmin),
               CustomText(text: "Welcome to oue food app",color: AppColors.green,size: 16.sp,),
@@ -78,6 +78,7 @@ class _SignupScreenState extends State<SignupScreen> {
                           },
                           text: "Sign up",
                           color: Colors.transparent,
+                          cBorder: Colors.white,
                           textColor: Colors.white,
                         ),
                         Gap(15),

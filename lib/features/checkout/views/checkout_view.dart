@@ -29,55 +29,53 @@ class _CheckoutViewState extends State<CheckoutView> {
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 15),
         child: SingleChildScrollView(
-          child: SingleChildScrollView(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                OrderDetailsWidget(
-                  fees: "3.5", order: '165.2', taxes: '15', total: '550.2'),
-                Gap(70),
-                CustomText(text: "Payment methods",size: 20,weight: FontWeight.bold),
-                ListTile(
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-                  contentPadding: EdgeInsets.symmetric(vertical: 8,horizontal: 16),
-                  tileColor: Color(0xff3C2F2F),
-                  title: CustomText(text: "Cash on delivery",color: Colors.white),
-                  leading: Image.asset("assets/images/dollar.png",width: 50,),
-                  trailing: Radio(
-                      activeColor: Colors.white,
-                      value: "cash",
-                      groupValue: selectedMethod,
-                      onChanged: (v) => setState(() => selectedMethod = v!)
-                ),
-                  onTap: () => setState(() => selectedMethod = 'cash')),
-                Gap(10),
-                ListTile(
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-                  contentPadding: EdgeInsets.symmetric(vertical: 2,horizontal: 16),
-                  tileColor: Colors.blue.shade900,
-                  title: CustomText(text: "Debit Card",color: Colors.white),
-                  subtitle: CustomText(text: "**** **** 1957",color: Colors.white),
-                  leading: Image.asset("assets/images/visa.png",width: 50),
-                  trailing: Radio(
-                      activeColor: Colors.white,
-                      value: "visa",
-                      groupValue: selectedMethod,
-                      onChanged: (v) => setState(() => selectedMethod = v!)
-                ),
-                  onTap: () => setState(() => selectedMethod = 'visa')),
-                Gap(5),
-                Row(
-                  children: [
-                    Checkbox(
-                        activeColor: Colors.red,
-                        checkColor: Colors.white,
-                        value: true,
-                        onChanged: (_){}),
-                    CustomText(text: "Save card details for future payments")
-                  ],
-                ),
-              ],
-            ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              OrderDetailsWidget(
+                fees: "3.5", order: '165.2', taxes: '15', total: '550.2'),
+              Gap(70),
+              CustomText(text: "Payment methods",size: 20,weight: FontWeight.bold),
+              ListTile(
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                contentPadding: EdgeInsets.symmetric(vertical: 8,horizontal: 16),
+                tileColor: Color(0xff3C2F2F),
+                title: CustomText(text: "Cash on delivery",color: Colors.white),
+                leading: Image.asset("assets/images/dollar.png",width: 50,),
+                trailing: Radio(
+                    activeColor: Colors.white,
+                    value: "cash",
+                    groupValue: selectedMethod,
+                    onChanged: (v) => setState(() => selectedMethod = v!)
+              ),
+                onTap: () => setState(() => selectedMethod = 'cash')),
+              Gap(10),
+              ListTile(
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                contentPadding: EdgeInsets.symmetric(vertical: 2,horizontal: 16),
+                tileColor: Colors.blue.shade900,
+                title: CustomText(text: "Debit Card",color: Colors.white),
+                subtitle: CustomText(text: "**** **** 1957",color: Colors.white),
+                leading: Image.asset("assets/images/visa.png",width: 50),
+                trailing: Radio(
+                    activeColor: Colors.white,
+                    value: "visa",
+                    groupValue: selectedMethod,
+                    onChanged: (v) => setState(() => selectedMethod = v!)
+              ),
+                onTap: () => setState(() => selectedMethod = 'visa')),
+              Gap(5),
+              Row(
+                children: [
+                  Checkbox(
+                      activeColor: Colors.red,
+                      checkColor: Colors.white,
+                      value: true,
+                      onChanged: (_){}),
+                  CustomText(text: "Save card details for future payments")
+                ],
+              ),
+            ],
           ),
         ),
       ),
@@ -88,12 +86,12 @@ class _CheckoutViewState extends State<CheckoutView> {
           boxShadow: [ BoxShadow(
             color: Colors.grey,
             offset: Offset(0, 1),
-            blurRadius: 10
+            blurRadius: 5
           )]
         ),
-        height: 120,
+        height: 100,
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -126,7 +124,7 @@ class _CheckoutViewState extends State<CheckoutView> {
                                    boxShadow: [ BoxShadow(
                                        color: Colors.grey,
                                        offset: Offset(0, 1),
-                                       blurRadius: 20
+                                       blurRadius: 5
                                    )]
                                ),
                                child: Column(

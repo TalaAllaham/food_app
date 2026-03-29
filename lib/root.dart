@@ -28,6 +28,7 @@ class _RootState extends State<Root> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: PageView(
         controller: controller,
         physics: NeverScrollableScrollPhysics(),

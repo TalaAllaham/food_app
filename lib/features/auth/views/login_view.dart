@@ -70,6 +70,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 print("object");
                             },
                             text: "Login",
+                            cBorder: Colors.white,
                             textColor: Colors.white,
                             color: Colors.transparent,
                           ),

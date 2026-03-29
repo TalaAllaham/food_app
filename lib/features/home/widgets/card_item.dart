@@ -27,7 +27,7 @@ class CardItem extends StatelessWidget {
               children: [
                 CustomText(text: "⭐  $rate"),
                 Spacer(),
-                Icon(CupertinoIcons.heart_solid,size: 21,color: AppColors.green),
+                Icon(CupertinoIcons.heart,size: 21,color: AppColors.green),
               ],
             ),
           ],
